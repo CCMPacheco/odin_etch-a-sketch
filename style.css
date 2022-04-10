@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: grid;
+  width: 512px;
+  height: 512px;
+}
+
+.container > div {
+  min-width: 8px;
+  min-height: 8px;
+  background-color: red;
+}

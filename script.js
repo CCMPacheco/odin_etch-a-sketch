@@ -24,5 +24,18 @@ function clearGrid() {
 }
 
 const container = document.querySelector(".container");
+const slider = document.getElementById("my-range");
+const value = document.querySelectorAll(".value");
+const clearBtn = document.querySelector(".clear");
 
-createGrid(16);
+slider.oninput = () => {
+  value.forEach((span) => (span.textContent = slider.value));
+};
+
+slider.onmouseup = () => {
+  createGrid(slider.value);
+};
+
+clearBtn.addEventListener("click", () => createGrid(slider.value));
+
+createGrid(slider.value);

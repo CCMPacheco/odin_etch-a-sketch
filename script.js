@@ -11,7 +11,7 @@ function createGrid(squares) {
     gridDiv.forEach((div) => {
       div.addEventListener(
         "mouseover",
-        () => (div.style.cssText = `background-color: black`)
+        () => (div.style.cssText = `background-color: ${color.value}`)
       );
     });
   }
@@ -27,6 +27,7 @@ const container = document.querySelector(".container");
 const slider = document.getElementById("my-range");
 const value = document.querySelectorAll(".value");
 const clearBtn = document.querySelector(".clear");
+const color = document.querySelector("#color");
 
 slider.oninput = () => {
   value.forEach((span) => (span.textContent = slider.value));

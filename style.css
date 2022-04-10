@@ -2,10 +2,40 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: monospace;
 }
 
 body {
   background-color: lightslategrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+button {
+  background-color: whitesmoke;
+  border: 2px solid darkslategray;
+  border-radius: 6px;
+  padding: 10px 0px;
+  font-size: 24px;
+  font-weight: bold;
+  width: 100%;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.options > div {
+  width: 200px;
+}
+
+.color-container {
+  display: flex;
+  justify-content: center;
 }
 
 .container {
@@ -21,4 +51,31 @@ body {
   min-width: 8px;
   min-height: 8px;
   background-color: whitesmoke;
+}
+
+#color {
+  background-color: transparent;
+  border: none;
+  width: 100px;
+  height: 100px;
+}
+
+#color::-webkit-color-swatch {
+  border: none;
+  border-radius: 50%;
+  border: 1px solid darkslategray;
+}
+
+.slider-container > p {
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 16px;
+  gap: 8px;
+}
+
+.slider {
+  width: 100%;
+  margin-top: 16px;
 }
